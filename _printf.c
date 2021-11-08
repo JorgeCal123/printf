@@ -12,6 +12,11 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (p = format; *p; p++)
 	{
+		if (*p != '%' && *p != '\\')
+		{
+			_putchar(*p);
+			continue;
+		}
 		is_Naturally_Special_Character(p, list);
 	}
 	va_end(list);
@@ -35,7 +40,27 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 }
 void is_Alternative_Special_Characters(__attribute__((unused))const char *p,__attribute__((unused))va_list list)
 {
-	printf("backslash\n");
+	switch (*++p)
+	{
+		case 'n':
+			print_n();
+			break;
+		case 'f':
+			print_f2();
+			break;
+		case '\"':
+			_putchar('\"');
+			break;
+		case '\\':
+			_putchar('\\');
+			break;
+		case '\'':
+			_putchar('\'');
+			break;
+		case '%':
+			_putchar('%');
+			break;
+	}
 }
 
 void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
