@@ -12,11 +12,6 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (p = format; *p; p++)
 	{
-		if (*p != '%' && *p != '\\')
-		{
-			_putchar(*p);
-			continue;
-		}
 		is_Naturally_Special_Character(p, list);
 	}
 	va_end(list);
@@ -24,25 +19,39 @@ int _printf(const char *format, ...)
 }
 void is_Naturally_Special_Character(const char *p, va_list list)
 {
-	switch (*++p)
+	/*printf("%c", *p);*/
+	if (*p == '%')
+		is_Format_Specificator(p, list);
+	
+	/*
+	if (*p == '\\')
+	{
+		printf("entra back");
+	}
+	
+
+	switch (*p)
 	{
 		case '%':
 			is_Format_Specificator(p, list);
-			putchar(*p);
 			break;
 
-		case '\\':
+		case 92:
+			printf("entra2\n");
 			is_Alternative_Special_Characters(p, list);
 			break;
-		
+		default:
 
+			break;
 	}
+*/
 }
-void is_Alternative_Special_Characters(__attribute__((unused))const char *p,__attribute__((unused))va_list list)
+void is_Alternative_Special_Characters(const char *p,__attribute__((unused))va_list list)
 {
 	switch (*++p)
 	{
 		case 'n':
+			printf("entra");
 			print_n();
 			break;
 		case 'f':
@@ -52,6 +61,7 @@ void is_Alternative_Special_Characters(__attribute__((unused))const char *p,__at
 			_putchar('\"');
 			break;
 		case '\\':
+			printf("entra al caso");
 			_putchar('\\');
 			break;
 		case '\'':
@@ -63,10 +73,10 @@ void is_Alternative_Special_Characters(__attribute__((unused))const char *p,__at
 	}
 }
 
-void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
+void is_Format_Specificator(const char *p, va_list list)
 {
-	is_Flag(p);
-
+	/*printf("antes ifs %c", *p);
+	is_Flag(p);*/
 	  switch(*++p)
             {
                 case 'c':
@@ -76,7 +86,7 @@ void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
 			print_s(list);
                 	break;
                 case '%':
-			_putchar('%');
+			porcentaje(p);
 			break;
 		case 'd':
 			print_d(list);
@@ -105,12 +115,13 @@ void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
 		default:
 			break;
             }
+
 }
 
 
 void is_Flag(const char *p)
 {
-	switch(*++p)
+	switch(*p)
 	{
 		case '0':
 			print_Zero();
