@@ -31,7 +31,7 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 			printf("funciona back\n");
 			is_Alternative_Special_Characters(p, list);
 			break;
-	
+		
 
 	}
 }
