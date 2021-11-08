@@ -7,7 +7,7 @@
  *     */
 int main(void)
 {
-	_printf("hola %", 19);
+	_printf("hola \\%", 19);
 	return(0);
 }
 /**
