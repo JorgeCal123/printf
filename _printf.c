@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _printf - description
  * @format - constant pointer type char
@@ -23,14 +22,15 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 	switch (*++p)
 	{
 		case '%':
-		printf("iporcentaje\n");
-		is_Format_Specificator(p, list);
-		putchar(*p);
-		break;
+			printf("iporcentaje\n");
+			is_Format_Specificator(p, list);
+			putchar(*p);
+			break;
+
 		case '\\':
-		printf("funciona back\n");
-		is_Alternative_Special_Characters(p, list);
-		break;
+			printf("funciona back\n");
+			is_Alternative_Special_Characters(p, list);
+			break;
 	
 
 	}
@@ -40,11 +40,50 @@ void is_Alternative_Special_Characters(__attribute__((unused))const char *p,__at
 	printf("backslash\n");
 }
 
-void is_Format_Specificator(__attribute__((unused))const char *p, va_list list)
+void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
 {
 	is_Flag(list);
 
-	printf("funcion ormato\n");
+	  switch(*++p)
+            {
+                case'c':
+			print_c(list);
+                	break;
+                case 's':
+			print_s(list);
+                	break;
+                case '%':
+			_putchar('%');
+			break;
+		case 'd':
+			print_d(list);
+			break;
+		case 'i':
+			print_i(list);
+			break;
+		case 'b':
+			print_b(list);
+			break;
+		case 'u':
+			print_u(list);
+			break;
+		case 'x':
+			print_x(list);
+			break;
+		case 'X':
+			print_X(list);
+			break;
+		case 'S':
+			print_S(list);
+			break;
+		case 'p':
+			print_p(list);
+			break;
+
+		default:
+			break;
+
+            }
 
 
 }
