@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (p = format; *p; p++)
 	{
-	is_Naturally_Special_Character(p, list);
+		is_Naturally_Special_Character(p, list);
 	}
 	va_end(list);
 	return (0);
@@ -22,13 +22,11 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 	switch (*++p)
 	{
 		case '%':
-			printf("iporcentaje\n");
 			is_Format_Specificator(p, list);
 			putchar(*p);
 			break;
 
 		case '\\':
-			printf("funciona back\n");
 			is_Alternative_Special_Characters(p, list);
 			break;
 	
@@ -42,11 +40,11 @@ void is_Alternative_Special_Characters(__attribute__((unused))const char *p,__at
 
 void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
 {
-	is_Flag(list);
+	is_Flag(p);
 
 	  switch(*++p)
             {
-                case'c':
+                case 'c':
 			print_c(list);
                 	break;
                 case 's':
@@ -79,17 +77,30 @@ void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
 		case 'p':
 			print_p(list);
 			break;
-
 		default:
 			break;
-
             }
-
-
 }
 
 
-void is_Flag(__attribute__((unused))va_list list)
+void is_Flag(const char *p)
 {
-	printf("entra flag\n");
+	switch(*++p)
+	{
+		case '0':
+			print_Zero();
+			break;
+		case '+':
+			print_More();
+			break;
+		case '-':
+			print_Less();
+			break;
+		case '#':
+			print_Hash();
+			break;
+		case ' ':
+			print_Space();
+			break;
+	}
 }

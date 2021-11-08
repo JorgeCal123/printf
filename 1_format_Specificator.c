@@ -7,9 +7,11 @@ void print_c(__attribute__((unused))va_list list)
 }
 
 
-void print_s(__attribute__((unused))va_list list)
+void print_s(va_list list)
 {
-printf("entra print s\n");
+	char *p;
+	for(p = va_arg(list, char *); * p; p++)
+		putchar(*p);
 }
 
 
