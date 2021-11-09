@@ -10,7 +10,7 @@ int main(void)
 /*
 	_printf("hola %c %s %d %i %f %b %u %x %X %S %p", 19);
 */
-	_printf(" %s %c %s%%","hola", 'h', "string");
+	_printf("%% %s %% %c %s%%","hola", 'h', "string");
 
 	_printf("//");
 

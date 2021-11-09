@@ -22,7 +22,8 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 	/*printf("%c", *p);*/
 	if (*p == '%')
 		is_Format_Specificator(p, list);
-	
+	else
+		_putchar(*p);
 	/*
 	if (*p == '\\')
 	{
@@ -86,7 +87,8 @@ void is_Format_Specificator(const char *p, va_list list)
 			print_s(list);
                 	break;
                 case '%':
-			porcentaje(p);
+			/*porcentaje(p);*/
+			_putchar('%');
 			break;
 		case 'd':
 			print_d(list);
@@ -113,6 +115,7 @@ void is_Format_Specificator(const char *p, va_list list)
 			print_p(list);
 			break;
 		default:
+			p++;
 			break;
             }
 

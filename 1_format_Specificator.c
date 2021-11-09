@@ -5,7 +5,7 @@ void print_c(va_list list)
 {
 	char p;
 	p = va_arg(list, int);
-	putchar(p);
+	_putchar(p);
 }
 
 
@@ -13,13 +13,9 @@ void print_s(va_list list)
 {
 	char *p;
 	for(p = va_arg(list, char *); * p; p++)
-		putchar(*p);
+		_putchar(*p);
 }
 
-void porcentaje(const char *p)
-{
-	_putchar(*p);
-}
 void print_d(__attribute__((unused))va_list list)
 {
 printf("entra print d\n");
