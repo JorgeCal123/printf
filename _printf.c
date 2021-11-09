@@ -32,7 +32,7 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 		is_Format_Specificator(p, list);
 	}
 	/*switch (*p)
-	/*printf("%c", *p);*/
+	printf("%c", *p);*/
 	if (*p == '%')
 		is_Format_Specificator(p, list);
 	
@@ -54,15 +54,12 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 			is_Alternative_Special_Characters(p, list);
 			break;
 		default:
-
-<<<<<<< HEAD
 	}*/
-=======
 			break;
 	}
 */
->>>>>>> ab34d979ca14cdb8f10337cf90ac7a0391a55ce2
 }
+
 void is_Alternative_Special_Characters(const char *p,__attribute__((unused))va_list list)
 {
 	switch (*++p)
