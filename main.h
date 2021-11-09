@@ -36,5 +36,6 @@ void print_Space(void);
 
 /*putchar.c */
 int _putchar(char c);
+int _strlen(const char *s); /*function to count lenght*/
 
 #endif

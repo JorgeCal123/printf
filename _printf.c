@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	const char *p;
+	int size = _strlen(format);
 
 	va_start(list, format);
 	for (p = format; *p; p++)
@@ -21,7 +22,7 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(list);
-	return (0);
+	return (size);
 }
 /**
  * is_Naturally_Special_Character - function that identifies me
