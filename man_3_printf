@@ -1,2 +1,20 @@
-./"This is the manpage of the _printf project in Holberton School
+This is the manpage of the _printf project in Holberton School
+_printf "9 november 2021" "_printf man_page"
 
+¿what is printf?
+
+It is a special function because it receives a variable number of parameters. The first parameter is fixed and is the format string. It includes text to be printed literally and marks to be replaced by text obtained from the additional parameters. Therefore, printf is called with as many parameters as there are marks in the format string plus one (the format string itself).
+
+Naturally special characters:
+
+There are certain types of characters that are usually used to define certain functionalities (\ "" ‘’%) that the program must understand:
+
+BACKSLASH:( \ ) It serves us for two things; one to recognize that if there is another special character followed by this, it will not take it as a special character but as any other character and the second to identify if it is an alternatively special character.
+
+DOUBLE QUOTATION MARKS: ( “ ” ) serves to identify that it is a character string or a String.
+
+SINGLE QUOTES: ( '' ) serves to identify if it is a character according to the ASCII code.
+
+PERCENTAGE: ( % ) It is a type of format that is used to specify the type of arguments that it is to be placed or replaced within your statement.
+
+ 
