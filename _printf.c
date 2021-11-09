@@ -110,6 +110,8 @@ void is_Format_Specificator(const char *p, va_list list)
 		case 'p':
 			print_p(list);
 			break;
+		default:
+			_putchar(*p);
 	}
 }
 /**
