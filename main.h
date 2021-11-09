@@ -14,6 +14,7 @@ void print_s(va_list list);
 void print_d(va_list list);
 void print_i(va_list list);
 void print_f(va_list list);
+void porcentaje(const char *p);
 /* Alternative_Special_characters.c */
 void print_n();
 void print_f2();
