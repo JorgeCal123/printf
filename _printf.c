@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
  */
 void is_Naturally_Special_Character(const char *p, va_list list)
 {
-<<<<<<< HEAD
 	/*if (*p != '%' || *p != '\\')
 	{
 		_putchar(*p);
@@ -68,7 +67,7 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 }
 
 void is_Alternative_Special_Characters(const char *p,__attribute__((unused))va_list list)
-=======
+{
 	if (*p == '%')
 		is_Format_Specificator(p, list);
 	else
@@ -81,7 +80,6 @@ void is_Alternative_Special_Characters(const char *p,__attribute__((unused))va_l
  * @p: constant pointer type char that has the format
  */
 void is_Alternative_Special_Characters(const char *p)
->>>>>>> 37c0888a369dd306f82dd15cdfec34719942870d
 {
 	switch (*++p)
 	{
