@@ -12,11 +12,6 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (p = format; *p; p++)
 	{
-		if (*p != '%' && *p != '\\')
-		{
-			_putchar(*p);
-			continue;
-		}
 		is_Naturally_Special_Character(p, list);
 	}
 	va_end(list);
@@ -24,7 +19,19 @@ int _printf(const char *format, ...)
 }
 void is_Naturally_Special_Character(const char *p, va_list list)
 {
-	switch (*++p)
+	/*if (*p != '%' || *p != '\\')
+	{
+		_putchar(*p);
+	}*/
+	if (*p == '%')
+	{
+		is_Format_Specificator(p, list);
+	}
+	if (*p != '\\')
+	{
+		is_Format_Specificator(p, list);
+	}
+	/*switch (*p)
 	{
 		case '%':
 			is_Format_Specificator(p, list);
@@ -36,7 +43,7 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 			break;
 		
 
-	}
+	}*/
 }
 void is_Alternative_Special_Characters(__attribute__((unused))const char *p,__attribute__((unused))va_list list)
 {
@@ -110,7 +117,7 @@ void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
 
 void is_Flag(const char *p)
 {
-	switch(*++p)
+	switch(*p)
 	{
 		case '0':
 			print_Zero();

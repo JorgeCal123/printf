@@ -10,7 +10,9 @@ int main(void)
 /*
 	_printf("hola %c %s %d %i %f %b %u %x %X %S %p", 19);
 */
-	_printf("\\ \" \' % segundo printf: %s\n", "Funciona");
+	_printf("\n");
+	_printf("\\");
+	_printf("%s%s", "hola1", "hola2");
 	return(0);
 }
 /**
