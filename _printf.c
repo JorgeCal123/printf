@@ -12,48 +12,98 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (p = format; *p; p++)
 	{
-	is_Naturally_Special_Character(p, list);
+		is_Naturally_Special_Character(p, list);
 	}
 	va_end(list);
 	return (0);
 }
 void is_Naturally_Special_Character(const char *p, va_list list)
 {
-	switch (*++p)
+	/*if (*p != '%' || *p != '\\')
+	{
+		_putchar(*p);
+	}*/
+	if (*p == '%')
+	{
+		is_Format_Specificator(p, list);
+	}
+	if (*p != '\\')
+	{
+		is_Format_Specificator(p, list);
+	}
+	/*switch (*p)
+	/*printf("%c", *p);*/
+	if (*p == '%')
+		is_Format_Specificator(p, list);
+	
+	/*
+	if (*p == '\\')
+	{
+		printf("entra back");
+	}
+	
+
+	switch (*p)
 	{
 		case '%':
-			printf("iporcentaje\n");
 			is_Format_Specificator(p, list);
-			putchar(*p);
 			break;
 
-		case '\\':
-			printf("funciona back\n");
+		case 92:
+			printf("entra2\n");
 			is_Alternative_Special_Characters(p, list);
 			break;
-		
+		default:
 
+<<<<<<< HEAD
+	}*/
+=======
+			break;
+	}
+*/
+>>>>>>> ab34d979ca14cdb8f10337cf90ac7a0391a55ce2
+}
+void is_Alternative_Special_Characters(const char *p,__attribute__((unused))va_list list)
+{
+	switch (*++p)
+	{
+		case 'n':
+			printf("entra");
+			print_n();
+			break;
+		case 'f':
+			print_f2();
+			break;
+		case '\"':
+			_putchar('\"');
+			break;
+		case '\\':
+			printf("entra al caso");
+			_putchar('\\');
+			break;
+		case '\'':
+			_putchar('\'');
+			break;
+		case '%':
+			_putchar('%');
+			break;
 	}
 }
-void is_Alternative_Special_Characters(__attribute__((unused))const char *p,__attribute__((unused))va_list list)
-{
-	printf("backslash\n");
-}
 
-void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
+void is_Format_Specificator(const char *p, va_list list)
 {
-	is_Flag(list);
-
+	/*printf("antes ifs %c", *p);
+	is_Flag(p);*/
 	  switch(*++p)
             {
-                case'c':
+                case 'c':
 			print_c(list);
                 	break;
                 case 's':
 			print_s(list);
                 	break;
                 case '%':
-			_putchar('%');
+			porcentaje(p);
 			break;
 		case 'd':
 			print_d(list);
@@ -79,17 +129,31 @@ void is_Format_Specificator(const char *p, __attribute__((unused))va_list list)
 		case 'p':
 			print_p(list);
 			break;
-
 		default:
 			break;
-
             }
-
 
 }
 
 
-void is_Flag(__attribute__((unused))va_list list)
+void is_Flag(const char *p)
 {
-	printf("entra flag\n");
+	switch(*p)
+	{
+		case '0':
+			print_Zero();
+			break;
+		case '+':
+			print_More();
+			break;
+		case '-':
+			print_Less();
+			break;
+		case '#':
+			print_Hash();
+			break;
+		case ' ':
+			print_Space();
+			break;
+	}
 }

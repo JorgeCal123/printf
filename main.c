@@ -7,7 +7,16 @@
  *     */
 int main(void)
 {
+/*
 	_printf("hola %c %s %d %i %f %b %u %x %X %S %p", 19);
+*/
+
+	_printf("\n");
+	_printf("\\");
+	_printf("%s%s", "hola1", "hola2");
+	printf(" %s %c %s%%","hola", 'h', "string");
+	_printf("//");
+	printf("\n");
 	return(0);
 }
 /**
