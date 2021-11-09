@@ -52,7 +52,13 @@ FLAGS
 ( ' ): The whole number or exponent of a decimal has the thousands grouping separator applied.
 ( # ): Precedes the extracted value by a 0 when used with the specifier octal conversion or.
 
+LENGTH MODIFIERS:
 
+( * ): Delete the mapping of this conversion, the conversion is done but its result is discarded.
+( h ): Indicates that the next conversion is an n and that the next pointer points to a short int (not an int). It is therefore the conversion of a single precision numerical value.
+( l ): Indicates that the next conversion is dioux or n and that the next pointer points to a long int, or that the conversion will be ef or g and the next pointer is a double (not a float). This denotes the conversion of a double precision numeric value.
+( q ): Indicates that the next conversion is dioux or n and that the next pointer points to a quad_t (not an int). It is, therefore, the conversion of a quadruple precision numeric value.
+( L ): Indicates that the conversion will be ef or g and that the next pointer is a long double. It is a quadruple precision conversion.
 
 
 
