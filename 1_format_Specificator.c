@@ -25,18 +25,20 @@ void print_s(va_list list)
  * print_d - function thar print a type double
  * @list: parameter of main
  */
-void print_d(__attribute__((unused))va_list list)
+void print_d(va_list list)
 {
-printf("entra print d\n");
+                int n = va_arg(list, int);
+		                _putchar(n);
 }
 
 /**
  * print_i - function thar print a type integer
  * @list: parameter of main
  */
-void print_i(__attribute__((unused))va_list list)
+void print_i(va_list list)
 {
-printf("entra print i\n");
+	        int n = va_arg(list, int);
+		_putchar(n);
 }
 
 /**

@@ -26,11 +26,11 @@ int _printf(const char *format, ...)
 void is_Naturally_Special_Character(const char *p, va_list list)
 {
 	if (*p == '%')
+	{
 		is_Format_Specificator(p, list);
-	else
-		_putchar(*p);
-}
 
+	}
+}
 /**
  * is_Alternative_Special_Characters - function that identifies me
  * if it is an alternatively special character and call his function
@@ -107,6 +107,8 @@ void is_Format_Specificator(const char *p, va_list list)
 		case 'p':
 			print_p(list);
 			break;
+		default:
+			_putchar(*p);
 	}
 }
 /**
