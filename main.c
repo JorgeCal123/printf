@@ -10,8 +10,8 @@ int main(void)
 /*
 	_printf("hola %c %s %d %i %f %b %u %x %X %S %p", 19);
 */
-	_printf("%% %s %% %chola %s%% %d %s %i","hola", 'h', "string", -10000, "string", 260000);
-
+	_printf("%% %s %% %c ola %s %% %d %s %i.-funciona","hola", 'h', "string", -10000, "string", 260000);
+	printf("\n");
 
 	/*_printf("\n");
 	_printf("\\");

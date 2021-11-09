@@ -12,7 +12,13 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (p = format; *p; p++)
 	{
-		is_Naturally_Special_Character(p, list);
+		if (*p != '%')
+			_putchar(*p);
+		else
+		{
+			is_Naturally_Special_Character(p, list);
+			p++;
+		}
 	}
 	va_end(list);
 	return (0);
@@ -106,8 +112,6 @@ void is_Format_Specificator(const char *p, va_list list)
 		case 'p':
 			print_p(list);
 			break;
-		default:
-			_putchar(*p);
 	}
 }
 /**
