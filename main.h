@@ -1,5 +1,5 @@
-#ifndef HEADER_PRINTF_H
-#define HEADER_PRINTF_H
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdarg.h>
 #include <stdio.h>
 /* funtion _string() */
