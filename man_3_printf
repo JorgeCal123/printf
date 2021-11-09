@@ -60,6 +60,6 @@ LENGTH MODIFIERS:
 ( q ): Indicates that the next conversion is dioux or n and that the next pointer points to a quad_t (not an int). It is, therefore, the conversion of a quadruple precision numeric value.
 ( L ): Indicates that the conversion will be ef or g and that the next pointer is a long double. It is a quadruple precision conversion.
 
+AUTHORS
 
-
-
+Written by Jorge Calambas and Christian Sanchez.
