@@ -29,10 +29,6 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 	{
 		is_Format_Specificator(p, list);
 	}
-	else 
-	{
-	_putchar(*p);
-	}
 }
 /**
  * is_Alternative_Special_Characters - function that identifies me

@@ -27,8 +27,28 @@ void print_s(va_list list)
  */
 void print_d(va_list list)
 {
-                int n = va_arg(list, int);
-		                _putchar(n);
+	unsigned int a, b, count;
+	int n = va_arg(list, int);
+		if (n < 0)
+		{
+			_putchar(45);
+			a = n * -1;
+		}
+	else
+	{
+		a = n;
+	}
+	b = a;
+	count = 1;
+		while (b > 9)
+		{
+			b /= 10;
+			count *= 10;
+		}
+		for (; count >= 1; count /= 10)
+		{
+			_putchar(((a / count) % 10) + 48);
+		}
 }
 
 /**
@@ -37,8 +57,28 @@ void print_d(va_list list)
  */
 void print_i(va_list list)
 {
-	        int n = va_arg(list, int);
-		_putchar(n);
+	unsigned int a, b, count;
+	int n = va_arg(list, int);
+		if (n < 0)
+		{
+		_putchar(45);
+		a = n * -1;
+	}
+	else
+	{
+		a = n;
+	}
+		b = a;
+		count = 1;
+			while (b > 9)
+			{
+				b /= 10;
+				count *= 10;
+			}
+			for (; count >= 1; count /= 10)
+			{
+				_putchar(((a / count) % 10) + 48);
+			}
 }
 
 /**
