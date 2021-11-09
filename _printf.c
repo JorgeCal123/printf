@@ -25,55 +25,15 @@ int _printf(const char *format, ...)
  */
 void is_Naturally_Special_Character(const char *p, va_list list)
 {
-	/*if (*p != '%' || *p != '\\')
-	{
-		_putchar(*p);
-	}*/
 	if (*p == '%')
 	{
 		is_Format_Specificator(p, list);
 	}
-	if (*p != '\\')
+	else 
 	{
-		is_Format_Specificator(p, list);
+	_putchar(*p);
 	}
-	/*switch (*p)
-	printf("%c", *p);*/
-	if (*p == '%')
-		is_Format_Specificator(p, list);
-	
-	/*
-	if (*p == '\\')
-	{
-		printf("entra back");
-	}
-	
-
-	switch (*p)
-	{
-		case '%':
-			is_Format_Specificator(p, list);
-			break;
-
-		case 92:
-			printf("entra2\n");
-			is_Alternative_Special_Characters(p, list);
-			break;
-		default:
-	}*/
-			break;
-	}
-*/
 }
-
-void is_Alternative_Special_Characters(const char *p,__attribute__((unused))va_list list)
-{
-	if (*p == '%')
-		is_Format_Specificator(p, list);
-	else
-		_putchar(*p);
-}
-
 /**
  * is_Alternative_Special_Characters - function that identifies me
  * if it is an alternatively special character and call his function
