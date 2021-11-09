@@ -80,13 +80,3 @@ void print_i(va_list list)
 				_putchar(((a / count) % 10) + 48);
 			}
 }
-
-/**
- * print_f - function thar print a type float
- * @list: parameter of main
- */
-void print_f(__attribute__((unused))va_list list)
-{
-
-}
-

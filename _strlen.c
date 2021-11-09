@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strllen - function
+ * _strlen - function
  *@s: char pointer
  *Return: int
  * **/

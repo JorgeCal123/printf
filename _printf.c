@@ -38,35 +38,6 @@ void is_Naturally_Special_Character(const char *p, va_list list)
 	}
 }
 /**
- * is_Alternative_Special_Characters - function that identifies me
- * if it is an alternatively special character and call his function
- * @p: constant pointer type char that has the format
- */
-void is_Alternative_Special_Characters(const char *p)
-{
-	switch (*++p)
-	{
-		case 'n':
-			print_n();
-			break;
-		case 'f':
-			print_f2();
-			break;
-		case '\"':
-			_putchar('\"');
-			break;
-		case '\\':
-			_putchar('\\');
-			break;
-		case '\'':
-			_putchar('\'');
-			break;
-		case '%':
-			_putchar('%');
-			break;
-	}
-}
-/**
  * is_Format_Specificator - function that identifies me
  * if it is a format specifier and calls its function
  * @p: constant pointer type char that has the format
@@ -75,7 +46,6 @@ void is_Alternative_Special_Characters(const char *p)
 
 void is_Format_Specificator(const char *p, va_list list)
 {
-	is_Flag(p);
 	switch (*++p)
 	{
 		case 'c':
@@ -92,51 +62,6 @@ void is_Format_Specificator(const char *p, va_list list)
 			break;
 		case 'i':
 			print_i(list);
-			break;
-		case 'b':
-			print_b(list);
-			break;
-		case 'u':
-			print_u(list);
-			break;
-		case 'x':
-			print_x(list);
-			break;
-		case 'X':
-			print_X(list);
-			break;
-		case 'S':
-			print_S(list);
-			break;
-		case 'p':
-			print_p(list);
-			break;
-	}
-}
-/**
- * is_Flag - function that identifies me if it is a flag
- * and calls its function
- * @p: constant pointer type char that has the format
- */
-
-void is_Flag(const char *p)
-{
-	switch (*p)
-	{
-		case '0':
-			print_Zero();
-			break;
-		case '+':
-			print_More();
-			break;
-		case '-':
-			print_Less();
-			break;
-		case '#':
-			print_Hash();
-			break;
-		case ' ':
-			print_Space();
 			break;
 	}
 }
