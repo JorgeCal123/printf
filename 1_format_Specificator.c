@@ -87,6 +87,6 @@ void print_i(va_list list)
  */
 void print_f(__attribute__((unused))va_list list)
 {
-printf("entra print f\n");
+
 }
 

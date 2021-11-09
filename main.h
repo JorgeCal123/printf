@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-#include <stdio.h>
 /* funtion _string() */
 int _printf(const char *format, ...);
 void is_Naturally_Special_Character(const char *p, va_list list);

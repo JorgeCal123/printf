@@ -46,7 +46,6 @@ void is_Alternative_Special_Characters(const char *p)
 	switch (*++p)
 	{
 		case 'n':
-			printf("entra");
 			print_n();
 			break;
 		case 'f':
@@ -56,7 +55,6 @@ void is_Alternative_Special_Characters(const char *p)
 			_putchar('\"');
 			break;
 		case '\\':
-			printf("entra al caso");
 			_putchar('\\');
 			break;
 		case '\'':
