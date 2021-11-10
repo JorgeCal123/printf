@@ -21,12 +21,15 @@ int print_s(va_list list)
 {
 	char *p = va_arg(list, char *);
 	int i;
-		if (p == NULL)
+
+	if (p == NULL)
 	{
 		p = "(null)";
 	}
 	for (i = 0; p[i]; i++)
+	{
 		_putchar(p[i]);
+	}
 	return (i);
 }
 /**
@@ -38,7 +41,8 @@ int print_d(va_list list)
 {
 	unsigned int a, b, count, c = 0;
 	int n = va_arg(list, int);
-		if (n < 0)
+
+	if (n < 0)
 	{
 		_putchar(45);
 		a = n * -1;
@@ -72,7 +76,8 @@ int print_i(va_list list)
 {
 	unsigned int a, b, count, c = 0;
 	int n = va_arg(list, int);
-		if (n < 0)
+
+	if (n < 0)
 	{
 		_putchar(45);
 		a = n * -1;

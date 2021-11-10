@@ -10,6 +10,10 @@ int _printf(const char *format, ...)
 	const char *p;
 	int size = 0;
 
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	va_start(list, format);
 	for (p = format; *p; p++)
 	{
@@ -17,6 +21,7 @@ int _printf(const char *format, ...)
 		{
 			_putchar(*p);
 			size++;
+			continue;
 		}
 		else
 		{
