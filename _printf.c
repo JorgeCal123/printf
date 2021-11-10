@@ -8,17 +8,21 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	const char *p;
-	int size = _strlen(format);
+	int size = 0;
 
 	va_start(list, format);
 	for (p = format; *p; p++)
 	{
 		if (*p != '%')
+		{
 			_putchar(*p);
+			size++;
+		}
 		else
 		{
 			is_Naturally_Special_Character(p, list);
 			p++;
+			size++;
 		}
 	}
 	va_end(list);
