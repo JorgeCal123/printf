@@ -19,15 +19,16 @@ int _printf(const char *format, ...)
 	{
 		if (*p != '%')
 		{
+			printf("entra\n");
 			_putchar(*p);
 			size++;
 			continue;
 		}
 		else
 		{
-			is_Naturally_Special_Character(p, list);
+			printf("entra 2\n");
+			is_Naturally_Special_Character(p, list, &size);
 			p++;
-			size++;
 		}
 	}
 	va_end(list);
@@ -38,12 +39,13 @@ int _printf(const char *format, ...)
  * if it is a special natural character
  * @p: constant pointer type char that has the format
  * @list: parameters of main
+ * @size: pointer integer with size from porcentage
  */
-void is_Naturally_Special_Character(const char *p, va_list list)
+void is_Naturally_Special_Character(const char *p, va_list list, int *size)
 {
 	if (*p == '%')
 	{
-		is_Format_Specificator(p, list);
+		is_Format_Specificator(p, list, size);
 	}
 }
 /**
@@ -51,26 +53,28 @@ void is_Naturally_Special_Character(const char *p, va_list list)
  * if it is a format specifier and calls its function
  * @p: constant pointer type char that has the format
  * @list: parameters of main
+ * @size: pointer integer with size from porcentage
  */
 
-void is_Format_Specificator(const char *p, va_list list)
+void is_Format_Specificator(const char *p, va_list list, int *size)
 {
 	switch (*++p)
 	{
 		case 'c':
-			print_c(list);
+			*size += print_c(list);
 			break;
 		case 's':
-			print_s(list);
+			*size += print_s(list);
 			break;
 		case '%':
 			_putchar('%');
+			*size += 1;
 			break;
 		case 'd':
-			print_d(list);
+			*size += print_d(list);
 			break;
 		case 'i':
-			print_i(list);
+			*size += print_i(list);
 			break;
 	}
 }
