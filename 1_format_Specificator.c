@@ -25,26 +25,58 @@ void print_s(va_list list)
  * print_d - function thar print a type double
  * @list: parameter of main
  */
-void print_d(__attribute__((unused))va_list list)
+void print_d(va_list list)
 {
-printf("entra print d\n");
+	unsigned int a, b, count;
+	int n = va_arg(list, int);
+		if (n < 0)
+		{
+			_putchar(45);
+			a = n * -1;
+		}
+	else
+	{
+		a = n;
+	}
+	b = a;
+	count = 1;
+		while (b > 9)
+		{
+			b /= 10;
+			count *= 10;
+		}
+		for (; count >= 1; count /= 10)
+		{
+			_putchar(((a / count) % 10) + 48);
+		}
 }
 
 /**
  * print_i - function thar print a type integer
  * @list: parameter of main
  */
-void print_i(__attribute__((unused))va_list list)
+void print_i(va_list list)
 {
-printf("entra print i\n");
+	unsigned int a, b, count;
+	int n = va_arg(list, int);
+		if (n < 0)
+		{
+		_putchar(45);
+		a = n * -1;
+	}
+	else
+	{
+		a = n;
+	}
+		b = a;
+		count = 1;
+			while (b > 9)
+			{
+				b /= 10;
+				count *= 10;
+			}
+			for (; count >= 1; count /= 10)
+			{
+				_putchar(((a / count) % 10) + 48);
+			}
 }
-
-/**
- * print_f - function thar print a type float
- * @list: parameter of main
- */
-void print_f(__attribute__((unused))va_list list)
-{
-printf("entra print f\n");
-}
-

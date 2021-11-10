@@ -8,14 +8,21 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	const char *p;
+	int size = _strlen(format);
 
 	va_start(list, format);
 	for (p = format; *p; p++)
 	{
-		is_Naturally_Special_Character(p, list);
+		if (*p != '%')
+			_putchar(*p);
+		else
+		{
+			is_Naturally_Special_Character(p, list);
+			p++;
+		}
 	}
 	va_end(list);
-	return (0);
+	return (size);
 }
 /**
  * is_Naturally_Special_Character - function that identifies me
@@ -25,84 +32,9 @@ int _printf(const char *format, ...)
  */
 void is_Naturally_Special_Character(const char *p, va_list list)
 {
-	/*if (*p != '%' || *p != '\\')
-	{
-		_putchar(*p);
-	}*/
 	if (*p == '%')
 	{
 		is_Format_Specificator(p, list);
-	}
-	if (*p != '\\')
-	{
-		is_Format_Specificator(p, list);
-	}
-	/*switch (*p)
-	printf("%c", *p);*/
-	if (*p == '%')
-		is_Format_Specificator(p, list);
-	
-	/*
-	if (*p == '\\')
-	{
-		printf("entra back");
-	}
-	
-
-	switch (*p)
-	{
-		case '%':
-			is_Format_Specificator(p, list);
-			break;
-
-		case 92:
-			printf("entra2\n");
-			is_Alternative_Special_Characters(p, list);
-			break;
-		default:
-	}*/
-			break;
-	}
-*/
-}
-
-void is_Alternative_Special_Characters(const char *p,__attribute__((unused))va_list list)
-{
-	if (*p == '%')
-		is_Format_Specificator(p, list);
-	else
-		_putchar(*p);
-}
-
-/**
- * is_Alternative_Special_Characters - function that identifies me
- * if it is an alternatively special character and call his function
- * @p: constant pointer type char that has the format
- */
-void is_Alternative_Special_Characters(const char *p)
-{
-	switch (*++p)
-	{
-		case 'n':
-			printf("entra");
-			print_n();
-			break;
-		case 'f':
-			print_f2();
-			break;
-		case '\"':
-			_putchar('\"');
-			break;
-		case '\\':
-			printf("entra al caso");
-			_putchar('\\');
-			break;
-		case '\'':
-			_putchar('\'');
-			break;
-		case '%':
-			_putchar('%');
-			break;
 	}
 }
 /**
@@ -114,7 +46,6 @@ void is_Alternative_Special_Characters(const char *p)
 
 void is_Format_Specificator(const char *p, va_list list)
 {
-	is_Flag(p);
 	switch (*++p)
 	{
 		case 'c':
@@ -131,51 +62,6 @@ void is_Format_Specificator(const char *p, va_list list)
 			break;
 		case 'i':
 			print_i(list);
-			break;
-		case 'b':
-			print_b(list);
-			break;
-		case 'u':
-			print_u(list);
-			break;
-		case 'x':
-			print_x(list);
-			break;
-		case 'X':
-			print_X(list);
-			break;
-		case 'S':
-			print_S(list);
-			break;
-		case 'p':
-			print_p(list);
-			break;
-	}
-}
-/**
- * is_Flag - function that identifies me if it is a flag
- * and calls its function
- * @p: constant pointer type char that has the format
- */
-
-void is_Flag(const char *p)
-{
-	switch (*p)
-	{
-		case '0':
-			print_Zero();
-			break;
-		case '+':
-			print_More();
-			break;
-		case '-':
-			print_Less();
-			break;
-		case '#':
-			print_Hash();
-			break;
-		case ' ':
-			print_Space();
 			break;
 	}
 }

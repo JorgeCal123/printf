@@ -1,0 +1,65 @@
+This is the manpage of the _printf project in Holberton School
+_printf "9 november 2021" "_printf man_page"
+
+¿what is printf?
+
+It is a special function because it receives a variable number of parameters. The first parameter is fixed and is the format string. It includes text to be printed literally and marks to be replaced by text obtained from the additional parameters. Therefore, printf is called with as many parameters as there are marks in the format string plus one (the format string itself).
+
+NATURALLY SPECIAL CHARACTERS:
+
+There are certain types of characters that are usually used to define certain functionalities (\ "" ‘’%) that the program must understand:
+
+BACKSLASH:( \ ) It serves us for two things; one to recognize that if there is another special character followed by this, it will not take it as a special character but as any other character and the second to identify if it is an alternatively special character.
+
+DOUBLE QUOTATION MARKS: ( “ ” ) serves to identify that it is a character string or a String.
+
+SINGLE QUOTES: ( '' ) serves to identify if it is a character according to the ASCII code.
+
+PERCENTAGE: ( % ) It is a type of format that is used to specify the type of arguments that it is to be placed or replaced within your statement.
+
+ALTERNATELY SPECIAL CHARACTERS:
+
+\a - Alert - Produces an alert to the user by means of a visible sound or warning.
+\b - Backspace - Moves the cursor one column to the left, unless the current position is first.
+\f - Form feed - Moves the cursor to the beginning of the next logical page.
+\n - Newline - Move the cursor to the beginning of the next line.
+\r - Carriage return - Mueve el cursor al principio de la línea actual.
+\t - Tab - Moves the cursor to the next tab stop on the current line. If there are no more tabs on the current line, the behavior is undefined.
+\v - Vertical tab - Move the cursor to the beginning of the next vertical tab. If there are no more tabs on the current page the behavior is undefined.
+
+FORMAT SPECIFICATIONS:
+
+%: A percent sign (\% also works).
+%c: Print a character in ASCII format.
+%d: A base 10 decimal number.
+%e: An exponential floating point number.
+%f: A floating point number.
+%g: A floating point number in general format.
+%i: An integer in base 10.
+%o: A number in octal.
+%p: A pointer is printed as a hexadecimal integer.
+%s: A string of characters.
+%u: An unassigned decimal number (base 10).
+%x: A lowercase hexadecimal (base 10) number.
+%X: An uppercase hexadecimal (base 10) number.
+
+FLAGS
+
+( - ): Left align the output of this placeholder. (the default is right align).
+( + ): Precede a plus sign for positive signed numeric types.
+(   ): Prepends a space for positive-signed numeric types.
+( 0 ): When the "width" option is specified, prepend zeros for the numeric type.
+( ' ): The whole number or exponent of a decimal has the thousands grouping separator applied.
+( # ): Precedes the extracted value by a 0 when used with the specifier octal conversion or.
+
+LENGTH MODIFIERS:
+
+( * ): Delete the mapping of this conversion, the conversion is done but its result is discarded.
+( h ): Indicates that the next conversion is an n and that the next pointer points to a short int (not an int). It is therefore the conversion of a single precision numerical value.
+( l ): Indicates that the next conversion is dioux or n and that the next pointer points to a long int, or that the conversion will be ef or g and the next pointer is a double (not a float). This denotes the conversion of a double precision numeric value.
+( q ): Indicates that the next conversion is dioux or n and that the next pointer points to a quad_t (not an int). It is, therefore, the conversion of a quadruple precision numeric value.
+( L ): Indicates that the conversion will be ef or g and that the next pointer is a long double. It is a quadruple precision conversion.
+
+AUTHORS
+
+Written by Jorge Calambas and Christian Sanchez.
