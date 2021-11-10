@@ -19,14 +19,12 @@ int _printf(const char *format, ...)
 	{
 		if (*p != '%')
 		{
-			printf("entra\n");
 			_putchar(*p);
 			size++;
 			continue;
 		}
 		else
 		{
-			printf("entra 2\n");
 			is_Naturally_Special_Character(p, list, &size);
 			p++;
 		}
