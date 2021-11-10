@@ -2,7 +2,6 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <stddef.h>
-#include <stdio.h>
 
 /* funtion _string() */
 int _printf(const char *format, ...);
