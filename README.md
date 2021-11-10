@@ -341,10 +341,9 @@
 </div>
 <p><br></p>
 <p dir="ltr" style="line-height:1.38;text-align: justify;margin-top:12pt;margin-bottom:12pt;"><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">How does printf work?</span></p>
-<p dir="ltr" style="line-height:1.38;text-align: justify;margin-top:12pt;margin-bottom:12pt;"><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><span style="border:none;display:inline-block;overflow:hidden;width:428px;height:59px;"><img src="https://lh6.googleusercontent.com/3T1J4oculGJvxG5zddERpsbJXFL90RiXJENAmqQdyexxZVDpQ-HnDlPklGpRetul7P_eLdJ18Q2vCeY6EnRihNagQ6NvMTu56cQyTG8GyDxR5-Em51uq_yqR4WSStk6zu-nAp7Kj" width="1372.6571428571428" height="745.2987108275565"></span></span></p>
+<p dir="ltr" style="line-height:1.38;text-align: justify;margin-top:12pt;margin-bottom:12pt;"><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><span style="border:none;display:inline-block;overflow:hidden;width:424px;height:65px;"><img src="https://lh5.googleusercontent.com/_31Y13meLx8AlheLeAxfGTw9huCS3QfLlLfDA_vBQsSlYdECOnKSPXrQlu-JCGmowIzEbyQ9OL4DsjbA8v5IV21R2FytxshKdRjr_UmuHcsFAuIhDB3oXbUPUlOFZxLwosd-IFQD" width="424" height="65"></span></span></p>
 <p dir="ltr" style="line-height:1.38;text-align: justify;background-color:#ffffff;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 12pt 0pt;"><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">The symbol &quot;%&quot; denotes the beginning of the format mark. The &quot;mark% d&quot;is replaced by the value of thevariable counter and the resulting string is printed. The symbol &quot;\ n&quot; represents a line break. The output, by default, is justified to the right of the total width that we find given to the field, which by default has the length of the string as its length.</span></p>
-<p dir="ltr" style="line-height:1.38;text-align: justify;background-color:#ffffff;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 12pt 0pt;"><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">If multiple flags appear in the format string, the values to be included are taken in the same order in which they appear. The following figure shows an example where the format string has three, % s, % d, and flags% 5.2f, which are processed using the string &quot;red&quot;, the integerrespectively 1234567, and the real number 3.14,. (</span><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">&quot;</span><span style="font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">My first fully recursive printf</span><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">&quot; (Emmanuel Gaviria, 2021)</span><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">)</span></p>
-<p dir="ltr" style="line-height:1.38;text-align: justify;background-color:#ffffff;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 12pt 0pt;"><span style="font-size:12pt;font-family:Verdana;color:#000000;background-color:#ffffff;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><span style="border:none;display:inline-block;overflow:hidden;width:587px;height:128px;"><img src="https://lh5.googleusercontent.com/_dT2amBeLabNeEh8oJUz22xhQv2xMPUS6cY1IwJ9IpocYh36YaHdKmeb8Nglvs-I5Li4CUAHyOif_ygLLYWbdNJDgCbbpRidnbAePh6ciYTQK5z-4d72jedw_xgRitbA8OWEs195" width="1419.720930232558" height="724.6451612903226"></span></span></p>
+<p dir="ltr" style="line-height:1.38;text-align: justify;background-color:#ffffff;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 12pt 0pt;"><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">If multiple flags appear in the format string, the values to be included are taken in the same order in which they appear. The following figure shows an example where the format string has three, % s, % d, and flags% 5.2f, which are processed using the string &quot;red&quot;, the integerrespectively 1234567, and the real number 3.14,. (</span><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">&quot;</span><span style="font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">My first fully recursive printf</span><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">&quot; (Emmanuel Gaviria, 2021)</span><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">)</span><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><span style="border:none;display:inline-block;overflow:hidden;width:579px;height:135px;"><img src="https://lh5.googleusercontent.com/5dBdiCXWWHtghsNBXY398Q7iA4bswOik7R3Ewgd23x2vPGrBPy2p8NA44PZkC48_Af9ZNuNrGpyNA2dOrVCO1QghE5kDP5MxM_d6ZJESjPLv7bIoy5wXGL8-TzffWkWfkWb8NhAD" width="579" height="135"></span></span></p>
 <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Image taken from &quot;</span><span style="font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">My first fully recursive printf</span><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">&quot; (Emmanuel Gaviria, 2021)</span></p>
 <p><br></p>
 <p dir="ltr" style="line-height:1.38;text-align: justify;margin-top:12pt;margin-bottom:12pt;"><span style="font-size:12pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">It is not verified that the number of marks in the format string and the number of remaining parameters be consistent. On error, the behavior of printf is indeterminate.</span></p>
@@ -863,6 +862,46 @@
     </table>
 </div>
 <p><br></p>
+<p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><a href="https://miro.com/app/board/o9J_llW9zhQ=/" style="text-decoration:none;"><span style="font-size:11pt;font-family:Arial;color:#1155cc;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">https://miro.com/app/board/o9J_llW9zhQ=/</span></a></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
 <p><br></p>
 <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">BIBLIOGRAPHY</span></p>
 <p><br></p>
@@ -876,4 +915,4 @@
 <p><br></p>
 <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><a href="https://www.youtube.com/watch?v=cCMQL3RJDlw" style="text-decoration:none;"><span style="font-size:11pt;font-family:Arial;color:#1155cc;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">https://www.youtube.com/watch?v=cCMQL3RJDlw</span></a></p>
 <p><br></p>
-<p><br></p>
+<p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:11pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">https://miro.com/app/board/o9J_llW9zhQ=/</span></p>
