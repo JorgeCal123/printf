@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	const char *p;
 	int size = 0;
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && !format[1]))
 	{
 		return (-1);
 	}
@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(list);
+	printf("%d", size);
 	return (size);
 }
 /**
@@ -73,6 +74,9 @@ void is_Format_Specificator(const char *p, va_list list, int *size)
 			break;
 		case 'i':
 			*size += print_i(list);
+			break;
+		default:
+			printf("\nentra y total es %d\n", *size);
 			break;
 	}
 }
