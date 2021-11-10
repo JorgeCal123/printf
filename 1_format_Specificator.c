@@ -1,7 +1,8 @@
 #include "main.h"
 /**
-  * print_c - function thar print a type char
+ * print_c - function thar print a type char
   * @list: parameter of main
+  * Return: int
   */
 int print_c(va_list list)
 {
@@ -14,13 +15,13 @@ int print_c(va_list list)
 /**
   * print_s -function thar print a type String
   * @list: parameter of main
+  * Return: int
   */
 int print_s(va_list list)
 {
 	char *p = va_arg(list, char *);
 	int i;
-	
-	if (p == NULL)
+		if (p == NULL)
 	{
 		p = "(null)";
 	}
@@ -31,13 +32,13 @@ int print_s(va_list list)
 /**
  * print_d - function thar print a type double
  * @list: parameter of main
+ * Return: int
  */
 int print_d(va_list list)
 {
 	unsigned int a, b, count, c = 0;
 	int n = va_arg(list, int);
-	
-	if (n < 0)
+		if (n < 0)
 	{
 		_putchar(45);
 		a = n * -1;
@@ -65,13 +66,13 @@ int print_d(va_list list)
 /**
  * print_i - function thar print a type integer
  * @list: parameter of main
+ * Return: int
  */
 int print_i(va_list list)
 {
 	unsigned int a, b, count, c = 0;
 	int n = va_arg(list, int);
-	
-	if (n < 0)
+		if (n < 0)
 	{
 		_putchar(45);
 		a = n * -1;
