@@ -74,5 +74,7 @@ void is_Format_Specificator(const char *p, va_list list, int *size)
 		case 'i':
 			*size += print_i(list);
 			break;
+		default:
+			_putchar(*p);
 	}
 }

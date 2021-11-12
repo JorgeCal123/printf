@@ -14,22 +14,18 @@
 
 int main(void)
 {
-	int len;
-	printf("mi printf =");
-	len = _printf("%");
-        printf("\nresultado del main %d\n", len);
+	int len, len2;
 
-	/*len2 = printf("%");
+	len = _printf("%K\n");
+	len2 = printf("%K\n");
 	fflush(stdout);
-	printf("%d = %d", len, len2);
-
 	if (len != len2)
 	{
 		printf("Lengths differ.\n");
 		fflush(stdout);
 		return (1);
 	}
-	*/
+
 	return (0);
 }
 
