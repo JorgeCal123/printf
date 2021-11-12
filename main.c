@@ -14,18 +14,19 @@
 
 int main(void)
 {
-	int len, len2;
+	int len;
 
 	len = _printf("%K\n");
-	len2 = printf("%K\n");
+	printf("size: %d \n", len);	
+/*	
 	fflush(stdout);
 	if (len != len2)
 	{
-		printf("Lengths differ.\n");
+		printf("Lengths differ.
 		fflush(stdout);
 		return (1);
 	}
-
+*/
 	return (0);
 }
 
